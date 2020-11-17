@@ -10,4 +10,25 @@
     <string name="facebook_icon">facebook icon</string>
     <string name="new_user_register_now">New User? Register Now</string>
     <string name ="already_have_an_account"> Already Have an Account?</string>
+
+    <string name="title_welcome_app">The film world</string>
+    <string name="title_genres">Genres</string>
+    <string name="title_home">Home</string>
+    <string name="title_toprate">Top rate</string>
+    <string name="title_nowplay">Now Playing</string>
+    <string name="title_upcoming">Upcoming</string>
+    <string name="title_myfavorite">My Favorite</string>
+    <string name="title_action">Action</string>
+    <string name="title_date">Aug, 20, 2020</string>
+    <string name="title_point">9.1</string>
+    <string name="title_vote_count">v 1000</string>
+    <string name="title_movie_name">Spider Man 3</string>
+    <string name="title_top_movie">3</string>
+    <string name="title_search">Search</string>
+    <string name="title_back">Back</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_overview">Overview</string>
+    <string name="title_cast_and_crew">Cast and Crew</string>
+    <string name="title_name_cast">Ali Phuong Trinh</string>
+    <string name="title_recommendation">Recommendations</string>
 </resources>

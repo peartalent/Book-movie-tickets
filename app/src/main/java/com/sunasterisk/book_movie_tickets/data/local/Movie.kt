@@ -34,6 +34,8 @@ data class Movie(
     @SerializedName("runtime")
     val runtime : Int,
     @SerializedName("status")
-    val status: String
+    val status: String,
+    var discount : Double?,
+    var priceTicker: Int? =0,
 // link youtube =https://www.youtube.com/watch?v=key
 )

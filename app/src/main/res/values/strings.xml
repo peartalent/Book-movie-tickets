@@ -9,7 +9,7 @@
     <string name="google_icon">google icon</string>
     <string name="facebook_icon">facebook icon</string>
     <string name="new_user_register_now">New User? Register Now</string>
-    <string name ="already_have_an_account"> Already Have an Account?</string>
+    <string name="already_have_an_account"> Already Have an Account?</string>
 
     <string name="title_welcome_app">The film world</string>
     <string name="title_genres">Genres</string>

@@ -5,8 +5,8 @@
     android:id="@+id/recyclerMovies"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     android:background="@android:color/transparent"
-    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
     tools:itemCount="8"
+    app:spanCount="2"
     tools:listitem="@layout/item_movie" />

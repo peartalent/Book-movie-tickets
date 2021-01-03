@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardviewMovie"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_5"
+    app:cardCornerRadius="@dimen/dp_10"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/buttonItemGenres"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_80"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/bg_genres"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/title_action"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_18" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

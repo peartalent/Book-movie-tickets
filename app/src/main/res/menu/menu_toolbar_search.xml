@@ -6,6 +6,7 @@
         android:id="@+id/itemSearch"
         android:icon="@drawable/ic_search_black_24dp"
         android:title="@string/title_search"
+        android:iconTint="#fff"
         app:showAsAction="ifRoom"
-        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+       />
 </menu>

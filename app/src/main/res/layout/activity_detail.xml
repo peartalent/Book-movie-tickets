@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
-    tools:context=".detail">
+    android:layout_margin="5dp"
+    tools:context=".ui.detail.Detail">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -28,14 +28,12 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_toolbar"
-            android:theme="@style/Theme.AppCompat.DayNight"
+            android:layout_height="49dp"
+            android:background="@android:color/transparent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:menu="@menu/menu_toolbar_main"
-            app:titleTextColor="@color/color_cape_cod" />
+            app:navigationIcon="@drawable/ic_arrow_back_black_24dp"/>
 
         <ImageView
             android:id="@+id/imagePoster"
@@ -45,8 +43,10 @@
             android:scaleType="fitCenter"
             android:src="@drawable/background"
             app:layout_constraintBottom_toTopOf="@+id/guidelineVote"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintVertical_bias="0.0"
             tools:ignore="ContentDescription" />
 
         <ImageButton
@@ -67,8 +67,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/title_movie_name"
-            android:textColor="@color/color_cape_cod"
-            android:textSize="@dimen/sp_26"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_22"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guidelineNameMovie"
             app:layout_constraintHorizontal_bias="0.0"
@@ -80,7 +80,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/title_date"
-            android:textColor="@color/color_cape_cod"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/darker_gray"
             android:textSize="@dimen/sp_16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textNameMovie" />
@@ -112,54 +113,31 @@
             app:layout_constraintStart_toEndOf="@+id/guidelineNameMovie"
             app:layout_constraintTop_toBottomOf="@id/textVoteAverage" />
 
-        <TextView
-            android:id="@+id/textGenresFirst"
-            android:layout_width="wrap_content"
+<!--        <TextView-->
+<!--            android:id="@+id/textGenresSecond"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/bg_item_genres"-->
+<!--            android:backgroundTint="@color/bnv_tab_item_foreground"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="@dimen/dp_10"-->
+<!--            android:text="@string/title_action"-->
+<!--            android:textColor="@color/color_pomegranate"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textReleaseDate" />-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerGenres"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_item_genres"
-            android:backgroundTint="@color/bnv_tab_item_foreground"
-            android:enabled="false"
-            android:gravity="center"
-            android:padding="@dimen/dp_10"
-            android:text="@string/title_action"
-            android:textColor="@color/color_pomegranate"
-            android:visibility="invisible"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textGenresFinal"
-            app:layout_constraintTop_toTopOf="@+id/textGenresSecond" />
-
-        <TextView
-            android:id="@+id/textGenresSecond"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_item_genres"
-            android:backgroundTint="@color/bnv_tab_item_foreground"
-            android:gravity="center"
-            android:padding="@dimen/dp_10"
-            android:text="@string/title_action"
-            android:textColor="@color/color_pomegranate"
-            app:layout_constraintEnd_toStartOf="@+id/textGenresFinal"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textReleaseDate" />
-
-        <TextView
-            android:id="@+id/textGenresFinal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_item_genres"
-            android:backgroundTint="@color/bnv_tab_item_foreground"
-            android:enabled="false"
-            android:gravity="center"
-            android:padding="@dimen/dp_10"
-            android:text="@string/title_action"
-            android:textColor="@color/color_pomegranate"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toStartOf="@+id/textGenresFirst"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textGenresSecond"
-            app:layout_constraintTop_toBottomOf="@+id/textReleaseDate" />
+            app:layout_constraintTop_toBottomOf="@+id/textReleaseDate"  />
 
         <TextView
             android:id="@+id/textOverview"
@@ -167,18 +145,19 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp_5"
             android:text="@string/title_overview"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/sp_26"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_22"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textGenresSecond" />
+            app:layout_constraintTop_toBottomOf="@+id/recyclerGenres" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
+            android:id="@+id/btnShowOverview"
             android:src="@drawable/ic_arrow_drop_down_black_24dp"
             app:layout_constraintBottom_toTopOf="@+id/textOverviewContent"
             app:layout_constraintStart_toEndOf="@+id/textOverview"
@@ -195,7 +174,7 @@
             android:maxLines="2"
             android:padding="@dimen/dp_5"
             android:text="@string/email"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/darker_gray"
             android:textSize="@dimen/sp_16"
             app:autoSizeTextType="uniform"
             app:layout_constraintEnd_toEndOf="parent"
@@ -209,8 +188,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp_5"
             android:text="@string/title_cast_and_crew"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/sp_26"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_22"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -221,26 +200,40 @@
             android:id="@+id/recyclerCastAndCrew"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_40"
-            android:layout_marginRight="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
             android:layout_marginBottom="1dp"
-            android:background="@drawable/bg_cast_and_crew"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/frameBook"
+            app:layout_constraintBottom_toTopOf="@id/textRecommendation"
             app:layout_constraintTop_toBottomOf="@+id/textCastAndCrew" />
 
-        <FrameLayout
-            android:id="@+id/frameBook"
+        <TextView
+            android:id="@+id/textRecommendation"
             android:layout_width="0dp"
-            android:layout_height="200dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5"
+            android:text="@string/title_recommendation"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_22"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerCastAndCrew" />
+            app:layout_constraintTop_toBottomOf="@id/recyclerCastAndCrew" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleMovieRecommendations"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textRecommendation"
+            />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

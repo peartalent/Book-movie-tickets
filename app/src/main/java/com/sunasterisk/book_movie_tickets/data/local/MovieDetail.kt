@@ -2,10 +2,10 @@ package com.sunasterisk.book_movie_tickets.data.local
 
 import com.google.gson.annotations.SerializedName
 
-data class Movie(
+data class MovieDetail(
     @SerializedName("id")
     val id: Int,
-    @SerializedName("")
+    @SerializedName("original_title")
     val title: String,
     @SerializedName("release_date")
     val releaseDate: String,
@@ -21,13 +21,13 @@ data class Movie(
     val genres: List<Genres>,
     @SerializedName("overview")
     val overview: String?,
-    @SerializedName("")
-    val videoPath: String?,
-    @SerializedName("")
-    val cast: List<Int>,
-    @SerializedName("")
-    val crew: List<Int>,
-    @SerializedName("")
+//    @SerializedName("")
+//    val videoPath: String?,
+//    @SerializedName("")
+//    val cast: List<Int>,
+//    @SerializedName("")
+//    val crew: List<Int>,
+//    @SerializedName("")
     val similarMovie: List<Int>,
     @SerializedName("popularity")
     val popularity : Double,

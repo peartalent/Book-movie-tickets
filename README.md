@@ -1,5 +1,5 @@
 # Book-movie-tickets
-Project 3: Ứng dụng đặt vé xem phim
+Project 3: Ứng dụng đặt vé xem phim -fail nên đổi sang ứng ụng review film
 ## Function
 - Xem danh sách phim: phổ biến, top rate, upcomming, xếp theo thể loại
 - Tìm kiếm phim theo tên
